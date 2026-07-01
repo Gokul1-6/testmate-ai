@@ -1,0 +1,47 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #e5eefb;
+  background: #08111f;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(circle at top left, #1f4ed8 0, transparent 28%), radial-gradient(circle at top right, #14b8a6 0, transparent 24%), #08111f; }
+button { border: 0; cursor: pointer; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+.app-shell { width: min(1280px, calc(100% - 32px)); margin: 0 auto; padding: 32px 0 24px; }
+.hero { display: flex; justify-content: space-between; gap: 22px; align-items: stretch; margin-bottom: 24px; }
+.pill { display: inline-flex; gap: 8px; align-items: center; padding: 9px 14px; border: 1px solid rgba(255,255,255,.15); border-radius: 999px; background: rgba(255,255,255,.08); color: #bfdbfe; }
+h1 { font-size: clamp(42px, 7vw, 76px); margin: 12px 0 8px; letter-spacing: -4px; }
+p { color: #aebcd0; line-height: 1.6; }
+.hero-card { min-width: 280px; border-radius: 28px; padding: 22px; background: linear-gradient(135deg, rgba(37,99,235,.5), rgba(20,184,166,.18)); border: 1px solid rgba(255,255,255,.16); display: flex; align-items: center; justify-content: center; gap: 12px; font-weight: 800; box-shadow: 0 24px 80px rgba(0,0,0,.25); }
+.grid, .result-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.result-layout { margin-top: 18px; grid-template-columns: .85fr 1.15fr; }
+.panel { border: 1px solid rgba(255,255,255,.13); background: rgba(9, 18, 34, .82); backdrop-filter: blur(18px); border-radius: 24px; padding: 20px; box-shadow: 0 20px 70px rgba(0,0,0,.22); }
+.panel-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 14px; }
+h2 { margin: 0; font-size: 20px; }
+h3 { margin: 0 0 6px; }
+.panel-head p { margin: 4px 0 0; font-size: 13px; }
+textarea, .test-box, .output { width: 100%; min-height: 430px; border-radius: 18px; border: 1px solid rgba(148,163,184,.24); background: #020817; color: #e2e8f0; padding: 16px; font-family: "Cascadia Code", "Fira Code", Consolas, monospace; font-size: 14px; line-height: 1.6; outline: none; resize: vertical; overflow: auto; }
+.test-box { white-space: pre-wrap; margin: 0; }
+.output { min-height: 300px; white-space: pre-wrap; margin: 0; color: #cbd5e1; }
+.actions { display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
+.actions button, .ghost { display: inline-flex; align-items: center; gap: 8px; padding: 12px 16px; border-radius: 14px; background: #1d4ed8; color: white; font-weight: 800; }
+.actions .primary { background: #0f766e; }
+.ghost { background: rgba(255,255,255,.08); color: #dbeafe; padding: 10px 13px; }
+.mini-actions { display: flex; gap: 8px; }
+.icon-btn { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; color: white; background: rgba(255,255,255,.1); }
+.error { margin-top: 12px; display: flex; align-items: center; gap: 8px; color: #fecaca; background: rgba(239,68,68,.15); padding: 12px; border-radius: 14px; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 16px 0; }
+.stat { border-radius: 18px; padding: 14px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); }
+.stat span { display: block; color: #9fb0c7; font-size: 12px; }
+.stat strong { display: block; font-size: 28px; margin-top: 4px; }
+.stat.good strong { color: #86efac; }
+.stat.bad strong { color: #fca5a5; }
+.status { display: flex; align-items: center; gap: 10px; border-radius: 18px; padding: 14px; background: rgba(59,130,246,.12); color: #bfdbfe; font-weight: 800; }
+.status svg { width: 22px; height: 22px; }
+.status.success { background: rgba(34,197,94,.12); color: #bbf7d0; }
+.status.fail { background: rgba(239,68,68,.12); color: #fecaca; }
+.explain { margin-top: 16px; padding: 16px; background: rgba(255,255,255,.06); border-radius: 18px; }
+.explain p { margin: 0; }
+footer { display: flex; justify-content: space-between; gap: 12px; margin: 20px 0 0; color: #93a4bc; font-size: 14px; }
+footer span { display: inline-flex; gap: 8px; align-items: center; }
+@media (max-width: 900px) { .hero, footer { flex-direction: column; } .grid, .result-layout { grid-template-columns: 1fr; } .stats { grid-template-columns: repeat(2, 1fr); } h1 { letter-spacing: -2px; } }

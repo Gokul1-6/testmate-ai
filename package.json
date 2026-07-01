@@ -1,0 +1,16 @@
+{
+  "name": "testmate-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Agentic JavaScript Testing Assistant for Gappy AI Hackathon",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "start": "npm run start --prefix backend",
+    "build": "npm run build --prefix frontend",
+    "clean": "node -e \"const fs=require('fs'); for (const p of ['node_modules','backend/node_modules','frontend/node_modules']) fs.rmSync(p,{recursive:true,force:true});\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
